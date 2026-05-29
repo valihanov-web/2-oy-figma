@@ -53,6 +53,8 @@ const Clothes1 = () => {
           <img src={img1} alt="" className="model" />
         </div>
       </div>
+
+      
     </section>
   );
 };

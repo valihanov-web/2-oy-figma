@@ -7,7 +7,11 @@
   display: flex;
   justify-content: center;
   padding: 24px;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
   box-sizing: border-box;
 }
 
@@ -22,14 +26,14 @@
   margin-bottom: 24px;
 }
 
-.cat-sep { 
-  color: #e5e5e5; 
-  margin: 0 4px; 
+.cat-sep {
+  color: #e5e5e5;
+  margin: 0 4px;
 }
 
-.cat-current { 
-  color: #000000; 
-  font-weight: 500; 
+.cat-current {
+  color: #000000;
+  font-weight: 500;
 }
 
 /* Asosiy Grid Maketi */
@@ -48,9 +52,9 @@
   background-color: #ffffff;
 }
 
-.close-filter-btn { 
-  display: none; 
-} 
+.close-filter-btn {
+  display: none;
+}
 
 .filter-header {
   display: flex;
@@ -61,22 +65,22 @@
   margin-bottom: 16px;
 }
 
-.filter-header h3 { 
-  margin: 0; 
-  font-size: 18px; 
-  font-weight: 700; 
+.filter-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .filter-icon {
   font-size: 16px;
 }
 
-.filter-section-list { 
-  padding: 16px 0; 
+.filter-section-list {
+  padding: 16px 0;
 }
 
-.border-b { 
-  border-bottom: 1px solid #f3f4f6; 
+.border-b {
+  border-bottom: 1px solid #f3f4f6;
 }
 
 .filter-row {
@@ -88,8 +92,13 @@
   cursor: pointer;
 }
 
-.filter-row:hover { 
-  color: #000000; 
+.filter-row:hover {
+  color: #000000;
+}
+
+.filter-row.active {
+  color: #000000;
+  font-weight: 700;
 }
 
 .filter-section-title {
@@ -99,10 +108,10 @@
   margin-bottom: 14px;
 }
 
-.filter-section-title h4 { 
-  margin: 0; 
-  font-size: 14px; 
-  font-weight: 700; 
+.filter-section-title h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .toggle-arrow {
@@ -111,323 +120,347 @@
 }
 
 /* Narx diapazoni (Price Slider) */
-.price-slider-mock { 
-  padding: 8px 4px; 
+.price-slider-mock {
+  padding: 8px 4px;
 }
 
-.slider-line { 
-  height: 4px; 
-  background-color: #f3f4f6; 
-  position: relative; 
-  border-radius: 2px; 
+.slider-line {
+  height: 4px;
+  background-color: #f3f4f6;
+  position: relative;
+  border-radius: 2px;
 }
 
-.slider-filled { 
-  position: absolute; 
-  left: 20%; 
-  right: 20%; 
-  height: 100%; 
-  background-color: #000000; 
+.slider-filled {
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  height: 100%;
+  background-color: #000000;
 }
 
-.slider-thumb { 
-  width: 16px; 
-  height: 16px; 
-  background-color: #000000; 
-  border-radius: 50%; 
-  position: absolute; 
-  top: -6px; 
+.slider-thumb {
+  width: 16px;
+  height: 16px;
+  background-color: #000000;
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
 }
 
-.slider-thumb.left { 
-  left: 20%; 
-  transform: translateX(-50%); 
+.slider-thumb.left {
+  left: 20%;
+  transform: translateX(-50%);
 }
 
-.slider-thumb.right { 
-  right: 20%; 
-  transform: translateX(50%); 
+.slider-thumb.right {
+  right: 20%;
+  transform: translateX(50%);
 }
 
-.price-labels { 
-  display: flex; 
-  justify-content: space-between; 
-  margin-top: 12px; 
-  font-size: 12px; 
-  font-weight: 600; 
+.price-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.price-range-inputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.price-range-inputs input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #111827;
+  background-color: #ffffff;
 }
 
 /* Ranglar palitrasi (Colors) */
-.colors-grid { 
-  display: grid; 
-  grid-template-columns: repeat(5, 1fr); 
-  gap: 8px; 
+.colors-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
 }
 
-.color-circle { 
-  width: 32px; 
-  height: 32px; 
-  border-radius: 50%; 
-  border: none; 
-  cursor: pointer; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  color: #ffffff; 
-  font-size: 11px; 
+.color-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 11px;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
-.color-circle.white-border { 
-  border: 1px solid #e5e7eb; 
-  color: #000000; 
+.color-circle.active {
+  transform: scale(1.08);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.18);
+}
+
+.color-circle.white-border {
+  border: 1px solid #e5e7eb;
+  color: #000000;
 }
 
 /* O'lchamlar (Sizes) */
-.sizes-wrap { 
-  display: flex; 
-  flex-wrap: wrap; 
-  gap: 6px; 
+.sizes-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
-.size-tag-btn { 
-  padding: 8px 14px; 
-  border-radius: 20px; 
-  font-size: 12px; 
-  background-color: #F0EEED; 
-  border: none; 
-  color: #6b7280; 
-  cursor: pointer; 
+.size-tag-btn {
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  background-color: #f0eeed;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
 }
 
-.size-tag-btn.active { 
-  background-color: #000000; 
-  color: #ffffff; 
+.size-tag-btn.active {
+  background-color: #000000;
+  color: #ffffff;
 }
 
 /* Filtrni qo'llash tugmasi */
-.apply-filter-btn { 
-  width: 100%; 
-  padding: 14px; 
-  background-color: #000000; 
-  color: #ffffff; 
-  border: none; 
-  border-radius: 24px; 
-  font-size: 13px; 
-  font-weight: 500; 
-  margin-top: 16px; 
-  cursor: pointer; 
+.apply-filter-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 16px;
+  cursor: pointer;
 }
 
 /* O'ng tarafdagi Katalog bo'limi */
-.catalog-content { 
-  display: flex; 
-  flex-direction: column; 
+.catalog-content {
+  display: flex;
+  flex-direction: column;
 }
 
-.catalog-header { 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  margin-bottom: 24px; 
+.catalog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
 }
 
-.catalog-header h2 { 
-  margin: 0; 
-  font-size: 32px; 
-  font-weight: 900; 
+.catalog-header h2 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 900;
 }
 
-.catalog-meta { 
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between; 
-  width: 100%; 
+.catalog-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.catalog-controls-row { 
-  display: flex; 
-  align-items: center; 
-  gap: 12px; 
+.catalog-controls-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.mobile-filter-trigger { 
-  display: none; 
-} 
+.mobile-filter-trigger {
+  display: none;
+}
 
 /* Saralash (Sort select) */
-.cat-sort-select { 
-  border: none; 
-  font-size: 14px; 
-  font-weight: 600; 
-  cursor: pointer; 
-  outline: none; 
-  background: none; 
+.cat-sort-select {
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  background: none;
 }
 
-.sort-label { 
-  font-size: 14px; 
-  color: #6b7280; 
+.sort-label {
+  font-size: 14px;
+  color: #6b7280;
 }
 
-.products-count-text { 
-  font-size: 14px; 
-  color: #6b7280; 
+.products-count-text {
+  font-size: 14px;
+  color: #6b7280;
 }
 
 /* Mahsulotlar katakchalari (Desktopda 3 ta ustun) */
-.catalog-grid { 
-  display: grid; 
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 20px; 
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-.catalog-card { 
-  display: flex; 
-  flex-direction: column; 
-  cursor: pointer; 
+.catalog-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
 }
 
-.cat-img-box { 
-  width: 100%; 
-  aspect-ratio: 1/1; 
-  background-color: #F0EEED; 
-  border-radius: 16px; 
-  margin-bottom: 12px; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  padding: 16px; 
-  box-sizing: border-box; 
-  overflow: hidden; 
+.cat-img-box {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: #f0eeed;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-.cat-product-img { 
-  width: 100%; 
-  height: 100%; 
-  object-fit: contain; 
-  transition: transform 0.2s ease; 
+.cat-product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.2s ease;
 }
 
-.catalog-card:hover .cat-product-img { 
-  transform: scale(1.03); 
+.catalog-card:hover .cat-product-img {
+  transform: scale(1.03);
 }
 
 /* Karta ichidagi matnlar va narxlar */
-.cat-prod-title { 
-  font-size: 15px; 
-  font-weight: 700; 
-  margin: 0 0 4px 0; 
-  color: #000000; 
+.cat-prod-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  color: #000000;
 }
 
-.cat-rating-row { 
-  display: flex; 
-  align-items: center; 
-  gap: 4px; 
-  margin-bottom: 6px; 
+.cat-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 6px;
 }
 
-.cat-stars { 
-  display: flex; 
-  gap: 1px; 
-  color: #FFC700; 
-  font-size: 12px; 
+.cat-stars {
+  display: flex;
+  gap: 1px;
+  color: #ffc700;
+  font-size: 12px;
 }
 
-.cat-star-empty { 
-  opacity: 0.2; 
+.cat-star-empty {
+  opacity: 0.2;
 }
 
-.cat-rating-val { 
-  font-size: 12px; 
-  color: #6b7280; 
+.cat-rating-val {
+  font-size: 12px;
+  color: #6b7280;
 }
 
-.cat-price-row { 
-  display: flex; 
-  align-items: center; 
-  gap: 8px; 
+.cat-price-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.cat-curr-price { 
-  font-size: 18px; 
-  font-weight: 700; 
+.cat-curr-price {
+  font-size: 18px;
+  font-weight: 700;
 }
 
-.cat-old-price { 
-  font-size: 15px; 
-  color: #d4d4d4; 
-  text-decoration: line-through; 
-  font-weight: 700; 
+.cat-old-price {
+  font-size: 15px;
+  color: #d4d4d4;
+  text-decoration: line-through;
+  font-weight: 700;
 }
 
-.cat-disc-tag { 
-  background-color: #FFECEF; 
-  color: #FF3333; 
-  font-size: 10px; 
-  font-weight: 600; 
-  padding: 2px 8px; 
-  border-radius: 10px; 
+.cat-disc-tag {
+  background-color: #ffecef;
+  color: #ff3333;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
 }
 
 /* Sahifalash (Pagination) */
-.cat-pagination { 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  border-top: 1px solid #f3f4f6; 
-  padding-top: 20px; 
-  margin-top: 40px; 
+.cat-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 20px;
+  margin-top: 40px;
 }
 
-.pag-nav-btn { 
-  padding: 8px 16px; 
-  background: none; 
-  border: 1px solid #e5e7eb; 
-  border-radius: 8px; 
-  font-size: 13px; 
-  font-weight: 500; 
-  cursor: pointer; 
-  background-color: #ffffff; 
+.pag-nav-btn {
+  padding: 8px 16px;
+  background: none;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #ffffff;
 }
 
-.pag-nav-btn:disabled { 
-  opacity: 0.5; 
-  cursor: not-allowed; 
+.pag-nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
-.pag-pages { 
-  display: flex; 
-  align-items: center; 
-  gap: 4px; 
+.pag-pages {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
-.pag-num { 
-  width: 36px; 
-  height: 36px; 
-  border: none; 
-  background: none; 
-  font-size: 13px; 
-  font-weight: 500; 
-  color: #6b7280; 
-  border-radius: 8px; 
-  cursor: pointer; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
+.pag-num {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.pag-num.active { 
-  background-color: #f3f4f6; 
-  color: #000000; 
-  font-weight: 600; 
+.pag-num.active {
+  background-color: #f3f4f6;
+  color: #000000;
+  font-weight: 600;
 }
 
-.pag-dots-desktop { 
-  color: #9ca3af; 
-  padding: 0 4px; 
+.pag-dots-desktop {
+  color: #9ca3af;
+  padding: 0 4px;
 }
-
 
 /* ==========================================================================
    2. IPAD / PLANSHET MEDIA SOʻROVLARI (Ekran kengligi 992px dan kichik bo'lsa)
@@ -453,7 +486,7 @@
 
   /* Filtr ochilganda (State orqali 'open' klassi qo'shiladi) */
   .filter-panel.open {
-    left: 0; 
+    left: 0;
   }
 
   /* Mobil panel ichidagi yopish '✕' tugmasi */
@@ -486,7 +519,7 @@
   }
 
   .catalog-meta .products-count-text {
-    order: 2; 
+    order: 2;
   }
 
   .catalog-controls-row {
@@ -502,7 +535,7 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: #F0EEED;
+    background-color: #f0eeed;
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -516,30 +549,29 @@
   }
 }
 
-
 /* ==========================================================================
    3. MOBILE / TELEFON MEDIA SOʻROVLARI (Ekran kengligi 600px dan kichik bo'lsa)
    ========================================================================== */
 @media (max-width: 600px) {
-  .category-page { 
-    padding: 16px; 
+  .category-page {
+    padding: 16px;
   }
 
   /* Matn va sarlavhalarni telefon ekraniga kichiklashtirish */
-  .catalog-header h2 { 
-    font-size: 24px; 
+  .catalog-header h2 {
+    font-size: 24px;
   }
-  
-  .cat-prod-title { 
-    font-size: 13px; 
+
+  .cat-prod-title {
+    font-size: 13px;
   }
-  
-  .cat-curr-price { 
-    font-size: 15px; 
+
+  .cat-curr-price {
+    font-size: 15px;
   }
-  
-  .cat-old-price { 
-    font-size: 13px; 
+
+  .cat-old-price {
+    font-size: 13px;
   }
 
   /* Telefonlarda mahsulot katakchalari avtomat ravishda 2 ta ustunga o'tadi */
@@ -548,14 +580,14 @@
     gap: 12px;
   }
 
-  .cat-img-box { 
-    border-radius: 12px; 
-    padding: 12px; 
+  .cat-img-box {
+    border-radius: 12px;
+    padding: 12px;
   }
 
   /* Mobil ekranda pagination (sahifalash) tugmalarini ixchamlashtirish */
-  .desktop-only, 
-
-    .pag-nav-btn {
-        display: none;
-    }           }
+  .desktop-only,
+  .pag-nav-btn {
+    display: none;
+  }
+}
