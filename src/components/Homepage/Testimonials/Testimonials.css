@@ -1,0 +1,138 @@
+/* Umumiy shriftlar */
+@import url('https://googleapis.com');
+
+.testimonials-section {
+    width: 100%;
+    max-width: 1240px;
+    margin: 80px auto;
+    padding: 0 20px;
+    font-family: 'Satoshi', sans-serif;
+    overflow: hidden;
+}
+
+/* Sarlavha qismi */
+.testimonials-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+.testimonials-title {
+    font-family: 'Integral CF', Arial, sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: #000000;
+    letter-spacing: -1px;
+}
+
+/* Strelkalar */
+.slider-controls {
+    display: flex;
+    gap: 12px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #000000;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.control-btn:active {
+    transform: scale(0.9);
+}
+
+.control-btn.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* Slider maydoni */
+.slider-container {
+    width: 100%;
+    overflow: visible; /* Yon tomondagi kartalar qisman ko'rinishi uchun */
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    width: 100%;
+}
+
+/* Har bir sharh kartasi */
+.review-card {
+    flex: 0 0 calc(33.333% - 20px);
+    margin-right: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 28px 32px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+/* Yulduzchalar */
+.stars-container {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 15px;
+}
+
+.star-icon {
+    color: #FFC633; /* Rasm dagi tillarang yulduz */
+    font-size: 22px;
+}
+
+/* Ism va tasdiqlash belgisi */
+.user-name {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.user-name h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.verified-icon {
+    color: #01AB31; /* Yashil tasdiqlash belgisi */
+    font-size: 19px;
+}
+
+/* Sharh matni */
+.review-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+}
+
+/* --- RESPONSIVE MODALARI --- */
+@media (max-width: 1024px) {
+    .testimonials-title { font-size: 36px; }
+    .review-card {
+        flex: 0 0 calc(50% - 15px);
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 640px) {
+    .testimonials-header {
+        align-items: center;
+    }
+    .testimonials-title { font-size: 28px; }
+    .review-card {
+        flex: 0 0 100%;
+        margin-right: 0;
+    }
+}

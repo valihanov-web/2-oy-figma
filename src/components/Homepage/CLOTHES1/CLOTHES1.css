@@ -1,0 +1,204 @@
+.clothes {
+  width: 100%;
+  min-height: 86vh;
+  background: #f2f0f1;
+  overflow: hidden;
+}
+
+.clothes-container {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 700px;
+}
+
+.clothes-left {
+  width: 50%;
+  z-index: 2;
+}
+
+.clothes-left h1 {
+  font-size: 72px;
+  line-height: 70px;
+  font-weight: 900;
+  color: #000;
+  margin-bottom: 25px;
+  font-family: Arial, sans-serif;
+}
+
+.clothes-left p {
+  max-width: 560px;
+  color: #777;
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 35px;
+}
+
+.clothes-left button {
+  width: 210px;
+  height: 58px;
+  border: none;
+  border-radius: 50px;
+  background: #000;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 55px;
+  transition: 0.3s;
+}
+
+.clothes-left button:hover {
+  transform: translateY(-3px);
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.stat h2 {
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.stat span {
+  color: #888;
+  font-size: 15px;
+}
+
+.line {
+  width: 1px;
+  height: 60px;
+  background: #d6d6d6;
+}
+
+.clothes-right {
+  width: 55%;
+  height: 700px;
+  position: relative;
+  overflow: visible;
+}
+
+.model {
+  position: absolute;
+  bottom: 0;
+  right: -120px;
+  height: 100%;
+  width: auto;
+  z-index: 1;
+}
+
+/* IMG2 PNG */
+
+.star-top {
+  position: absolute;
+  width: 90px;
+  top: 70px;
+  right: 40px;
+  z-index: 99;
+}
+
+.star-middle {
+  position: absolute;
+  width: 55px;
+  left: 40px;
+  top: 240px;
+  z-index: 99;
+}
+
+@media (max-width: 1024px) {
+  .clothes-container {
+    width: 95%;
+    flex-wrap: wrap;
+    min-height: auto;
+    gap: 40px;
+    padding: 40px 0;
+  }
+
+  .clothes-left,
+  .clothes-right {
+    width: 100%;
+  }
+
+  .clothes-left h1 {
+    font-size: 56px;
+    line-height: 62px;
+  }
+
+  .clothes-left p {
+    max-width: 100%;
+  }
+
+  .clothes-right {
+    height: auto;
+  }
+
+  .model {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .clothes-container {
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .clothes-left h1 {
+    font-size: 38px;
+    line-height: 44px;
+  }
+
+  .clothes-left p {
+    font-size: 15px;
+    line-height: 26px;
+  }
+
+  .clothes-left button {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .stats {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .stat h2 {
+    font-size: 34px;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .clothes-right {
+    max-width: 560px;
+    margin: auto;
+  }
+
+  .star-top,
+  .star-middle {
+    width: 70px;
+  }
+
+  .star-top {
+    top: 30px;
+    right: 20px;
+  }
+
+  .star-middle {
+    top: 180px;
+    left: 15px;
+  }
+}

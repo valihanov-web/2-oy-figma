@@ -1,0 +1,267 @@
+/* Umumiy orqa fon va tekst sozlamalari */
+.footer-section {
+  width: 100%;
+  background-color: #F0EEED; /* Pastki qismning umumiy och kulrang foni */
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  position: relative;
+  padding-top: 140px; /* Qora quti tepaga chiqib turishi uchun joy */
+  padding-bottom: 40px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  max-width: 1140px;
+  width: 100%;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* 1. Newsletter Bloki (Tepadagi qora quti) */
+.newsletter-card {
+  background-color: #000000;
+  border-radius: 20px;
+  padding: 40px 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: -90px; /* Kulrang fondan tepaga siljitish */
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 1140px;
+  box-sizing: border-box;
+  gap: 24px;
+}
+
+.newsletter-title {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.mail-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  font-size: 16px;
+}
+
+.newsletter-input {
+  width: 100%;
+  height: 46px;
+  border-radius: 23px;
+  border: none;
+  padding: 0 16px 0 46px;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  background-color: #ffffff;
+}
+
+.subscribe-btn {
+  width: 100%;
+  height: 46px;
+  border-radius: 23px;
+  border: none;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.subscribe-btn:hover {
+  background-color: #e5e7eb;
+}
+
+/* Responsive Newsletter (Telefonlar uchun) */
+@media (max-width: 768px) {
+  .footer-section {
+    padding-top: 220px;
+  }
+  .newsletter-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    top: -160px;
+  }
+  .newsletter-title {
+    font-size: 24px;
+  }
+  .newsletter-form {
+    max-width: 100%;
+  }
+}
+
+/* 2. Asosiy Linklar qatori */
+.footer-main-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Mobil qurilmalarda 2 tadan */
+  gap: 32px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+@media (min-width: 768px) {
+  .footer-main-links {
+    grid-template-columns: 2fr repeat(4, 1fr); /* Kompyuterda normal tartib */
+  }
+}
+
+/* Brend ustuni */
+.footer-brand-column {
+  grid-column: span 2;
+}
+
+@media (min-width: 768px) {
+  .footer-brand-column {
+    grid-column: span 1;
+    padding-right: 40px;
+  }
+}
+
+.brand-logo {
+  font-size: 28px;
+  font-weight: 900;
+  margin: 0 0 16px 0;
+  color: #000000;
+}
+
+.brand-desc {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+}
+
+/* Ijtimoiy tarmoq aylanachalari */
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-dot {
+  width: 28px;
+  height: 28px;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 12px;
+  color: #000000;
+  transition: all 0.2s;
+}
+
+.social-dot.active-social {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.social-dot:hover {
+  transform: translateY(-2px);
+}
+
+/* Linklar ro'yxati ustunlari */
+.links-column h4 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #000000;
+  margin: 0 0 20px 0;
+}
+
+.links-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.links-column ul li a {
+  font-size: 13px;
+  color: #6b7280;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.links-column ul li a:hover {
+  color: #000000;
+}
+
+/* 3. Pastki mualliflik va To'lov paneli */
+.footer-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.copyright-text {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.payment-badges {
+  display: flex;
+  gap: 8px;
+}
+
+/* To'lov tizimlari dizayni */
+.pay-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 46px;
+  height: 24px;
+  box-sizing: border-box;
+}
+
+/* Kichik dizayn simulyatsiyalari */
+.visa { color: #1a1f71; }
+.mastercard { color: #eb001b; }
+.paypal { color: #003087; }
+
+@media (max-width: 500px) {
+  .footer-bottom-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+}

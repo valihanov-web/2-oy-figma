@@ -1,0 +1,339 @@
+/* 1. Umumiy va asosiy sahifa sozlamalari */
+.product-container {
+  min-height: 90vh;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #000000;
+  box-sizing: border-box;
+}
+
+.product-wrapper {
+  max-width: 1140px;
+  width: 100%;
+}
+
+/* 2. Breadcrumb (Navigatsiya) */
+.breadcrumb {
+  font-size: 12px;
+  color: #a3a3a3;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.breadcrumb .separator {
+  color: #e5e5e5;
+}
+
+.breadcrumb .current {
+  color: #4b5563;
+  font-weight: 500;
+}
+
+/* 3. Grid Struktura (Moslashuvchan) */
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
+
+/* 4. Kichik rasmlar (Thumbnails) */
+.thumbnail-list {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+}
+
+@media (min-width: 768px) {
+  .thumbnail-list {
+    grid-column: span 2 / span 2;
+    flex-direction: column;
+  }
+}
+
+.thumbnail-item {
+  width: 100%;
+  height: 120px;
+  background-color: #F0EEED;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .thumbnail-item {
+    height: 136px;
+  }
+}
+
+.thumbnail-item.active {
+  border-color: #000000;
+}
+
+.thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 5. Markazdagi Asosiy rasm */
+.main-image-box {
+  background-color: #F0EEED;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 340px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .main-image-box {
+    grid-column: span 5 / span 5;
+    height: 440px;
+  }
+}
+
+.main-product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-height: 380px;
+}
+
+/* 6. Mahsulot matnlari va tafsilotlari */
+.details-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 8px;
+}
+
+@media (min-width: 768px) {
+  .details-box {
+    grid-column: span 5 / span 5;
+  }
+}
+
+.product-title {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  line-height: 1;
+  margin: 0 0 8px 0;
+}
+
+/* Reyting */
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.stars {
+  color: #FFC700;
+  font-size: 18px;
+}
+
+.star-empty {
+  color: #FFC700;
+  font-size: 18px;
+  opacity: 0.3;
+}
+
+.rating-value {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+  margin-left: 6px;
+}
+
+/* Narx bloki */
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.current-price {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.old-price {
+  font-size: 28px;
+  font-weight: bold;
+  color: #d4d4d4;
+  text-decoration: line-through;
+}
+
+.discount-tag {
+  background-color: #FFECEF;
+  color: #FF3333;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 9999px;
+}
+
+/* Tavsif (Description) */
+.description {
+  font-size: 12px;
+  color: #a3a3a3;
+  line-height: 1.6;
+  margin: 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+/* 7. Tanlovlar (Rang va O'lcham) */
+.section-block {
+  padding: 16px 0;
+}
+
+.separator-line {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.section-title {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0 0 10px 0;
+  font-weight: 500;
+}
+
+/* Rang variantlari */
+.color-options {
+  display: flex;
+  gap: 14px;
+}
+
+.color-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 12px;
+  transition: transform 0.1s ease;
+}
+
+.color-btn:active {
+  transform: scale(0.95);
+}
+
+/* O'lcham variantlari */
+.size-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.size-btn {
+  padding: 10px 20px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  background-color: #F0EEED;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.size-btn:hover {
+  background-color: #e5e5e5;
+}
+
+.size-btn.active {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* 8. Miqdorlagich va Savat tugmasi */
+.action-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  align-items: center;
+}
+
+.counter-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F0EEED;
+  width: 112px;
+  padding: 12px 16px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.counter-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #000000;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.1s ease;
+}
+
+.counter-btn:hover {
+  opacity: 0.6;
+}
+
+.counter-btn:active {
+  transform: scale(0.9);
+}
+
+.counter-value {
+  width: 24px;
+  text-align: center;
+}
+
+/* Savatchaga qo'shish (Add to Cart) */
+.add-to-cart-btn {
+  flex: 1;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 16px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #262626;
+}
+
+.add-to-cart-btn:active {
+  transform: scale(0.99);
+}

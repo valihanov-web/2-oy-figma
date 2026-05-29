@@ -1,0 +1,562 @@
+/* ==========================================================================
+   1. DESKTOP (STANDART ENGLIKLAR UCHUN) ASOSIY STILLAR
+   ========================================================================== */
+.category-page {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  box-sizing: border-box;
+}
+
+.category-wrapper {
+  max-width: 1140px;
+  width: 100%;
+}
+
+/* Breadcrumb (Navigatsiya yo'li) */
+.cat-breadcrumb {
+  font-size: 12px;
+  color: #a3a3a3;
+  margin-bottom: 24px;
+}
+
+.cat-sep { 
+  color: #e5e5e5; 
+  margin: 0 4px; 
+}
+
+.cat-current { 
+  color: #000000; 
+  font-weight: 500; 
+}
+
+/* Asosiy Grid Maketi */
+.category-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+}
+
+/* Chap tarafdagi Filtr Sidebar */
+.filter-panel {
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 20px;
+  height: fit-content;
+  background-color: #ffffff;
+}
+
+.close-filter-btn { 
+  display: none; 
+} 
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f3f4f6;
+  margin-bottom: 16px;
+}
+
+.filter-header h3 { 
+  margin: 0; 
+  font-size: 18px; 
+  font-weight: 700; 
+}
+
+.filter-icon {
+  font-size: 16px;
+}
+
+.filter-section-list { 
+  padding: 16px 0; 
+}
+
+.border-b { 
+  border-bottom: 1px solid #f3f4f6; 
+}
+
+.filter-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #6b7280;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.filter-row:hover { 
+  color: #000000; 
+}
+
+.filter-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.filter-section-title h4 { 
+  margin: 0; 
+  font-size: 14px; 
+  font-weight: 700; 
+}
+
+.toggle-arrow {
+  font-size: 12px;
+  color: #000000;
+}
+
+/* Narx diapazoni (Price Slider) */
+.price-slider-mock { 
+  padding: 8px 4px; 
+}
+
+.slider-line { 
+  height: 4px; 
+  background-color: #f3f4f6; 
+  position: relative; 
+  border-radius: 2px; 
+}
+
+.slider-filled { 
+  position: absolute; 
+  left: 20%; 
+  right: 20%; 
+  height: 100%; 
+  background-color: #000000; 
+}
+
+.slider-thumb { 
+  width: 16px; 
+  height: 16px; 
+  background-color: #000000; 
+  border-radius: 50%; 
+  position: absolute; 
+  top: -6px; 
+}
+
+.slider-thumb.left { 
+  left: 20%; 
+  transform: translateX(-50%); 
+}
+
+.slider-thumb.right { 
+  right: 20%; 
+  transform: translateX(50%); 
+}
+
+.price-labels { 
+  display: flex; 
+  justify-content: space-between; 
+  margin-top: 12px; 
+  font-size: 12px; 
+  font-weight: 600; 
+}
+
+/* Ranglar palitrasi (Colors) */
+.colors-grid { 
+  display: grid; 
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 8px; 
+}
+
+.color-circle { 
+  width: 32px; 
+  height: 32px; 
+  border-radius: 50%; 
+  border: none; 
+  cursor: pointer; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  color: #ffffff; 
+  font-size: 11px; 
+}
+
+.color-circle.white-border { 
+  border: 1px solid #e5e7eb; 
+  color: #000000; 
+}
+
+/* O'lchamlar (Sizes) */
+.sizes-wrap { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 6px; 
+}
+
+.size-tag-btn { 
+  padding: 8px 14px; 
+  border-radius: 20px; 
+  font-size: 12px; 
+  background-color: #F0EEED; 
+  border: none; 
+  color: #6b7280; 
+  cursor: pointer; 
+}
+
+.size-tag-btn.active { 
+  background-color: #000000; 
+  color: #ffffff; 
+}
+
+/* Filtrni qo'llash tugmasi */
+.apply-filter-btn { 
+  width: 100%; 
+  padding: 14px; 
+  background-color: #000000; 
+  color: #ffffff; 
+  border: none; 
+  border-radius: 24px; 
+  font-size: 13px; 
+  font-weight: 500; 
+  margin-top: 16px; 
+  cursor: pointer; 
+}
+
+/* O'ng tarafdagi Katalog bo'limi */
+.catalog-content { 
+  display: flex; 
+  flex-direction: column; 
+}
+
+.catalog-header { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 24px; 
+}
+
+.catalog-header h2 { 
+  margin: 0; 
+  font-size: 32px; 
+  font-weight: 900; 
+}
+
+.catalog-meta { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  width: 100%; 
+}
+
+.catalog-controls-row { 
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+}
+
+.mobile-filter-trigger { 
+  display: none; 
+} 
+
+/* Saralash (Sort select) */
+.cat-sort-select { 
+  border: none; 
+  font-size: 14px; 
+  font-weight: 600; 
+  cursor: pointer; 
+  outline: none; 
+  background: none; 
+}
+
+.sort-label { 
+  font-size: 14px; 
+  color: #6b7280; 
+}
+
+.products-count-text { 
+  font-size: 14px; 
+  color: #6b7280; 
+}
+
+/* Mahsulotlar katakchalari (Desktopda 3 ta ustun) */
+.catalog-grid { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+}
+
+.catalog-card { 
+  display: flex; 
+  flex-direction: column; 
+  cursor: pointer; 
+}
+
+.cat-img-box { 
+  width: 100%; 
+  aspect-ratio: 1/1; 
+  background-color: #F0EEED; 
+  border-radius: 16px; 
+  margin-bottom: 12px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 16px; 
+  box-sizing: border-box; 
+  overflow: hidden; 
+}
+
+.cat-product-img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: contain; 
+  transition: transform 0.2s ease; 
+}
+
+.catalog-card:hover .cat-product-img { 
+  transform: scale(1.03); 
+}
+
+/* Karta ichidagi matnlar va narxlar */
+.cat-prod-title { 
+  font-size: 15px; 
+  font-weight: 700; 
+  margin: 0 0 4px 0; 
+  color: #000000; 
+}
+
+.cat-rating-row { 
+  display: flex; 
+  align-items: center; 
+  gap: 4px; 
+  margin-bottom: 6px; 
+}
+
+.cat-stars { 
+  display: flex; 
+  gap: 1px; 
+  color: #FFC700; 
+  font-size: 12px; 
+}
+
+.cat-star-empty { 
+  opacity: 0.2; 
+}
+
+.cat-rating-val { 
+  font-size: 12px; 
+  color: #6b7280; 
+}
+
+.cat-price-row { 
+  display: flex; 
+  align-items: center; 
+  gap: 8px; 
+}
+
+.cat-curr-price { 
+  font-size: 18px; 
+  font-weight: 700; 
+}
+
+.cat-old-price { 
+  font-size: 15px; 
+  color: #d4d4d4; 
+  text-decoration: line-through; 
+  font-weight: 700; 
+}
+
+.cat-disc-tag { 
+  background-color: #FFECEF; 
+  color: #FF3333; 
+  font-size: 10px; 
+  font-weight: 600; 
+  padding: 2px 8px; 
+  border-radius: 10px; 
+}
+
+/* Sahifalash (Pagination) */
+.cat-pagination { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  border-top: 1px solid #f3f4f6; 
+  padding-top: 20px; 
+  margin-top: 40px; 
+}
+
+.pag-nav-btn { 
+  padding: 8px 16px; 
+  background: none; 
+  border: 1px solid #e5e7eb; 
+  border-radius: 8px; 
+  font-size: 13px; 
+  font-weight: 500; 
+  cursor: pointer; 
+  background-color: #ffffff; 
+}
+
+.pag-nav-btn:disabled { 
+  opacity: 0.5; 
+  cursor: not-allowed; 
+}
+
+.pag-pages { 
+  display: flex; 
+  align-items: center; 
+  gap: 4px; 
+}
+
+.pag-num { 
+  width: 36px; 
+  height: 36px; 
+  border: none; 
+  background: none; 
+  font-size: 13px; 
+  font-weight: 500; 
+  color: #6b7280; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.pag-num.active { 
+  background-color: #f3f4f6; 
+  color: #000000; 
+  font-weight: 600; 
+}
+
+.pag-dots-desktop { 
+  color: #9ca3af; 
+  padding: 0 4px; 
+}
+
+
+/* ==========================================================================
+   2. IPAD / PLANSHET MEDIA SOʻROVLARI (Ekran kengligi 992px dan kichik bo'lsa)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .category-layout {
+    grid-template-columns: 1fr; /* Filtr yon paneli olib tashlanadi */
+  }
+
+  /* Filtr yon oynasini mobil yashirin panelga (Drawer) aylantirish */
+  .filter-panel {
+    position: fixed;
+    top: 0;
+    left: -320px; /* Standart holatda chap tomonda yashirinadi */
+    width: 280px;
+    height: 100vh;
+    z-index: 1000;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+    transition: left 0.3s ease-in-out;
+  }
+
+  /* Filtr ochilganda (State orqali 'open' klassi qo'shiladi) */
+  .filter-panel.open {
+    left: 0; 
+  }
+
+  /* Mobil panel ichidagi yopish '✕' tugmasi */
+  .close-filter-btn {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #6b7280;
+    padding: 4px;
+  }
+
+  /* Filtr ochilganda uning orqa fonini xiralashtiruvchi qatlam */
+  .filter-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+  }
+
+  /* Yuqori boshqaruv elementlarini joylashtirish */
+  .catalog-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .catalog-meta .products-count-text {
+    order: 2; 
+  }
+
+  .catalog-controls-row {
+    width: 100%;
+    justify-content: space-between;
+    order: 1;
+  }
+
+  /* Mobil rejimda filtrni ochuvchi yumaloq tugma */
+  .mobile-filter-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #F0EEED;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  /* iPad ekranlarida kiyimlar 3 ta ustun bo'lib tura oladi */
+  .catalog-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+
+/* ==========================================================================
+   3. MOBILE / TELEFON MEDIA SOʻROVLARI (Ekran kengligi 600px dan kichik bo'lsa)
+   ========================================================================== */
+@media (max-width: 600px) {
+  .category-page { 
+    padding: 16px; 
+  }
+
+  /* Matn va sarlavhalarni telefon ekraniga kichiklashtirish */
+  .catalog-header h2 { 
+    font-size: 24px; 
+  }
+  
+  .cat-prod-title { 
+    font-size: 13px; 
+  }
+  
+  .cat-curr-price { 
+    font-size: 15px; 
+  }
+  
+  .cat-old-price { 
+    font-size: 13px; 
+  }
+
+  /* Telefonlarda mahsulot katakchalari avtomat ravishda 2 ta ustunga o'tadi */
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .cat-img-box { 
+    border-radius: 12px; 
+    padding: 12px; 
+  }
+
+  /* Mobil ekranda pagination (sahifalash) tugmalarini ixchamlashtirish */
+  .desktop-only, 
+
+    .pag-nav-btn {
+        display: none;
+    }           }
