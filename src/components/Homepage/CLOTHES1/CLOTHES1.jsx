@@ -4,7 +4,7 @@ import "./CLOTHES1.css";
 import img1 from "../../../assets/img1.png";
 import img2 from "../../../assets/img2.png";
 
-const CLOTHES1 = () => {
+const Clothes1 = () => {
   return (
     <section className="clothes">
       <div className="clothes-container">
@@ -57,4 +57,4 @@ const CLOTHES1 = () => {
   );
 };
 
-export default CLOTHES1;
+export default Clothes1;
